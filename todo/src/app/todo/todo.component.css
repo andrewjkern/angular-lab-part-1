@@ -1,0 +1,50 @@
+.completed {
+  text-decoration: line-through;
+}
+
+li {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+}
+
+
+
+button {
+  text-decoration: none;
+  font-weight: 300;
+}
+
+body {
+  background: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 80vw;
+  height: 60vh;
+  background-color: white;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+.addForm {
+  width: 80vw;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
+.add {
+  background-color: #ff1493;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+}
