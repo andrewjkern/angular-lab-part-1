@@ -6,6 +6,7 @@ li {
   display: flex;
   justify-content: flex-start;
   align-self: center;
+  width: 100%;
 }
 
 
@@ -18,9 +19,9 @@ button {
 body {
   background: none;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  width: 80vw;
-  height: 60vh;
   background-color: white;
+  margin: 100px;
+  font-weight: 300;
 }
 
 .left {
@@ -33,7 +34,7 @@ body {
 .addForm {
   width: 80vw;
   display: flex;
-  align-self: center;
+
   flex-direction: column;
 }
 
@@ -43,8 +44,7 @@ body {
 
 .container {
   display: flex;
-  align-items: center;
   flex-direction: column;
-
-
+  padding: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
