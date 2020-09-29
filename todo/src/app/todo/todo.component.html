@@ -3,23 +3,47 @@
 <body>
     <div class="container">
         <h1>TODO List</h1>
-        <h3>Place to store your todos</h3>
-        <form class="filterForm"></form>
-        <input type="text" placeholder="Filter your to-dos">
+        <h3>A place to store your todos</h3>
+        <form #filterPost="ngForm" class="filterForm">
+            <input (change)="handleFilter(filterPost)" name="filterTodo" [(ngModel)]="filterTodo" id="addText"
+                type="text" placeholder="Filter Your todos" />
+        </form>
         <ol>
             <li *ngFor="let todo of todos; index as i" [ngClass]="{completed: todo.completed}">
 
                 <div class="left">
                     <p>{{ i }}.</p>
-                    <button *ngIf="!todo.completed" (click)="handleComplete(i)">Complete</button>
+                    <button class="completeBtn" *ngIf="!todo.completed" (click)="handleComplete(i)">Complete</button>
                     {{todo.task}}
+                    <span class="date">Do By: {{todo.date | date}}</span>
                 </div>
-                <button>X</button>
+                <button (click)="removeItem()">X</button>
             </li>
         </ol>
-        <form class="addForm">
-            <input type="text" placeholder="Add your to-do">
+        <!-- <app-family></app-family> -->
+        <form #addForm="ngForm" (ngSubmit)="addItem(addForm)" class="addForm">
+            <input name="addInput" type="text" placeholder="Add your to-do" ngModel>
             <button class="add">Add</button>
         </form>
     </div>
 </body>
+
+
+<!-- <main>
+<section>
+    <h1>TODO List</h1>
+    <p>A Place to store your todos</p>
+    <form action="">
+        <input type="text" name="filter" placeholder="Filter your to-dos"/>
+        <ol>
+            <li *ngFor="let item of todos; index as i">
+                <div class="item_container">
+                    <button *ngIf="!todo.completed" class =complete_btn (click)="handleComplete(i)">Complete</button>
+                    <p class="task" [ngClass]="{completed: item.completed}">{{item.task}}</p>
+                    <button>X</button>
+                </div>
+            </li>
+        </ol>
+    </form>
+</section>
+</main> -->

@@ -32,14 +32,14 @@ body {
 }
 
 .addForm {
-  width: 80vw;
+  width: auto;
   display: flex;
-
   flex-direction: column;
 }
 
 .add {
   background-color: #ff1493;
+  border-radius: 4px;
 }
 
 .container {
@@ -48,3 +48,27 @@ body {
   padding: 10px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
+.completeBtn {
+  color: #ff69b4;
+  border-color: #ff69b4;
+  background-color: white;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+
+
+
+
+
+/* main{
+  display: flex;
+justify-content: center;
+margin: 20px 0;}
+
+section{display: flex;
+flex-direction: column;
+background-color: white;
+
+} */
